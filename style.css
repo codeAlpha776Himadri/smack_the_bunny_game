@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(hsl(36deg 100% 50%), hsl(45deg 100% 51%)); */
+    /* background-color: hsl(88deg 100% 77%); */
+    background: #ffcea1;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FAFFD1, #ffdd45);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container::before {
+    background: url('https://images.unsplash.com/photo-1511542229800-663a99ca1817?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    /* background-size: 10%; */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.top-dashboard {
+    height: 14vh;
+    width: 96vw;
+    background: hsl(0deg 0% 0% / 5%);
+    border-radius: 6px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.score_level {
+    position: absolute;
+    height: 100%;
+    width: 16%;
+    left: 80%;
+    /* background: black; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    height: 70%;
+    width: 100%;
+    /* background: greenyellow; */
+    color: orange;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 4px black;
+}
+
+.level {
+    height: 30%;
+    width: 100%;
+    /* background: honeydew; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.heading {
+    font-size: 38px;
+    color: orange;
+    text-shadow: 0px 0px 6px black;
+}
+
+.desc {
+    font-size: 24px;
+    word-spacing: 11px;
+    letter-spacing: 5px;
+    color: hsl(14deg 100% 57%);
+    text-shadow: 0px 0px 2px black;
+}
+
+.lower-section {
+    height: 78vh;
+    width: 96vw;
+    /* background: rgba(0, 0, 0, 0.205); */
+    margin-top: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left-dashboard {
+    height: 96%;
+    width: 24%;
+    background: hsl(0deg 0% 0% / 5%);
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    height: 34px;
+    width: 105px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    color: orange;
+    border-radius: 29px;
+    font-size: 16px;
+    border: none;
+    background: hsl(0deg 0% 0% / 84%);
+    box-shadow: 0px 0px 26px white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05) translateX(4px);
+}
+
+.levels {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.level {
+    margin: 10px;
+    font-size: 14px;
+    padding: 4px;
+    color: hsl(14deg 100% 57%);
+}
+
+.level-easy {
+    transform: translateX(-40px);
+}
+
+.level-intermediate {
+    transform: translateX(0px);
+}
+
+.level-hard {
+    transform: translateX(40px);
+}
+
+.game-section {
+    height: 96%;
+    width: 74%;
+    /* background: rgba(255, 255, 255, 0.075); */
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 40%;
+    width: 60%;
+    /* border:1px solid black ; */
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.bottom-row {
+    height: 40%;
+    width: 60%;
+    /* border:1px solid black ; */
+    display: flex;
+}
+
+.hole {
+    height: 100%;
+    width: 33.33%;
+    /* border: 1px solid red; */
+    margin: 3px;
+    position: relative;
+    overflow: hidden;
+    background: url('./assets/burrow.png') bottom center no-repeat;
+    background-size: 110%;
+}
+
+.mole {
+    background: url('./assets/cartoon-rabbit-holding-carrot_29190-5532-removebg-preview.png') bottom center no-repeat;
+    background-size: 0%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 90%;
+    transition: all 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hole.up .mole {
+    top: 0;
+    background-size: 60%;
+}
