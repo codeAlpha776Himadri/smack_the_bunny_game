@@ -61,7 +61,7 @@ function startGame() {
     if (isStart === false) // once started again cant ve started
         peekBunny();
 
-    setTimeout(() => timeUp = true, 20000);  // 10 seconds game 
+    setTimeout(() => timeUp = true, 20000);  // 20 seconds game 
 
     return;
 }
